@@ -24,10 +24,3 @@ Route::get('/avisos/{post}', [PostController::class, 'show']);
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
-
-  main[m
-  pr/sesion-3[m
-  sesion-4[m
-  sesion-5[m
-* [32msesion-6[m
-  sesionN-tarea[m
