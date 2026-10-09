@@ -6,13 +6,7 @@
 // Tiene tres errores a proposito. Fijate en cuales te avisa JavaScript,
 // cuando te avisa, y cual no te avisa nunca.
 
-interface Aviso {
-  id: number;
-  titulo: string;
-  categoria?: { id: number; nombre: string };
-  creado: string;
-}
-const avisos: Aviso[] = [
+const avisos = [
   { id: 1, titulo: 'Cambio de horario en barandilla', categoria: { id: 1, nombre: 'Aviso' }, creado: '2026-09-10T10:00:00-06:00' },
   { id: 2, titulo: 'Curso de primeros auxilios', creado: '2026-09-09T09:00:00-06:00' }
 ];
