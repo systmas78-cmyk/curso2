@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\PostController;
 use App\Http\Controllers\Api\TokenController;
+use App\Models\Categoria;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/token/revocar', [TokenController::class, 'revocar']);
 });
 
+Route::get('/categorias', fn () => Categoria::orderBy('nombre')->get(['id', 'nombre']));
 Route::get('/avisos', [PostController::class, 'index']);
 Route::get('/avisos/{post}', [PostController::class, 'show']);
 Route::get('/user', function (Request $request) {
