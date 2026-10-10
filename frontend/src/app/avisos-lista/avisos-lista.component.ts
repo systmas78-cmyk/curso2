@@ -32,4 +32,9 @@ export class AvisosListaComponent implements OnInit {
       }
     });
   }
+
+  agregar(aviso: Aviso): void {
+    this.error = '';
+    this.avisos = [aviso, ...this.avisos];
+  }
 }
